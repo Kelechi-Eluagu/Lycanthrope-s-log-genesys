@@ -1,0 +1,1 @@
+# a console app that records the events of a werewolf.
