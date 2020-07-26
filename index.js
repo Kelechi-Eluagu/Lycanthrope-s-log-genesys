@@ -1,7 +1,7 @@
 const foods = ["Beans", "Chicken and fries", "egg sauce", "egg roll", "potatoe porridge", "Pancakes", "Spaghetti stir-fry"];
 
 const getAllFood = () => Math.trunc(Math.random() * foods.length );
-class SimpleFood {
+class wereWolfAte {
   constructor(food, day) {
     this.food = food;
     this.day = day;
@@ -13,15 +13,15 @@ const Lycanthrope = function(name) {
   this.log = [];
 
   this.eat = function(food, day) {
-    this.log.push(new SimpleFood(food, day));
+    this.log.push(new wereWolfAte(food, day));
   };
 
   this.showLogs = function() {
     // console.log(this.log);
     for (log of this.log) {
       
-      if (log.food === "Pizza") {
-        console.log(log, " // Transformed");
+      if (log.food === "Chicken and fries") {
+        console.log(log, " // Changed to werewolf");
       } else {
         console.log(log);
       }
@@ -33,13 +33,13 @@ const Jacques = function(name) {
   Lycanthrope.call(this, name);
 };
 
-const jacques = new Jacques("Jack");
+const jacques = new Jacques("Ella");
 
-function start(jack) {
+function start(ella) {
   const totalTime = 24; // 2 weeks
 
   for (let i = 0; i < totalTime; i++) {
-    jack.eat(foods[getAllFood()], i + 1);
+    ella.eat(foods[getAllFood()], i + 1);
   }
 }
 
