@@ -1,6 +1,6 @@
-const foods = ["Rice", "Pizza", "barbacue", "meatpie", "spaghetti", "Soup", "burger"];
+const foods = ["Beans", "Chicken and fries", "egg sauce", "egg roll", "potatoe porridge", "Pancakes", "Spaghetti stir-fry"];
 
-const getRandomFood = () => Math.trunc(Math.random() * foods.length );
+const getAllFood = () => Math.trunc(Math.random() * foods.length );
 class SimpleFood {
   constructor(food, day) {
     this.food = food;
@@ -39,7 +39,7 @@ function start(jack) {
   const totalTime = 24; // 2 weeks
 
   for (let i = 0; i < totalTime; i++) {
-    jack.eat(foods[getRandomFood()], i + 1);
+    jack.eat(foods[getAllFood()], i + 1);
   }
 }
 
